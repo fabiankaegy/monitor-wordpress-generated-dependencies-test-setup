@@ -2,6 +2,7 @@
  * WordPress dependencies
  */
 import { __ } from '@wordpress/i18n';
+import { Icon } from '@wordpress/components';
 import { RichText, useBlockProps } from '@wordpress/block-editor';
 
 // Importing the block's editor styles via JS will enable hot reloading for css
@@ -33,6 +34,7 @@ const ExampleBlockEdit = (props) => {
 				value={title}
 				onChange={(title) => setAttributes({ title })}
 			/>
+			<Icon icon="wordpress" />
 		</div>
 	);
 };
