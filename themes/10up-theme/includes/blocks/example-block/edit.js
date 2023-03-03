@@ -3,6 +3,7 @@
  */
 import { __ } from '@wordpress/i18n';
 import { Icon } from '@wordpress/components';
+import { View } from '@wordpress/primitives';
 import { RichText, useBlockProps } from '@wordpress/block-editor';
 
 // Importing the block's editor styles via JS will enable hot reloading for css
@@ -26,7 +27,7 @@ const ExampleBlockEdit = (props) => {
 	const blockProps = useBlockProps();
 
 	return (
-		<div {...blockProps}>
+		<View {...blockProps}>
 			<RichText
 				className="wp-block-example-block__title"
 				tagName="h2"
@@ -35,7 +36,7 @@ const ExampleBlockEdit = (props) => {
 				onChange={(title) => setAttributes({ title })}
 			/>
 			<Icon icon="wordpress" />
-		</div>
+		</View>
 	);
 };
 export default ExampleBlockEdit;
